@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeePageComponent } from './employee-page/employee-page.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
+import { UpdateEmpComponent } from './update-emp/update-emp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeePageComponent,
-    AddEmpComponent
+    AddEmpComponent,
+    UpdateEmpComponent
   ],
   imports: [
     BrowserModule,

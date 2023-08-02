@@ -11,7 +11,9 @@ import { EmpServiceService } from '../emp-service.service';
 export class EmployeePageComponent implements OnInit {
   AllEmp: Emp[]=[];
   flag:number=0
+  flag1:number=0
   n:number=0
+  e1!:Emp
   constructor(private service:EmpServiceService) { }
 
   ngOnInit(): void {
@@ -23,9 +25,17 @@ export class EmployeePageComponent implements OnInit {
     console.log("hai")
     this.getall();
   }
+  flagset1():void{
+    this.flag1=0
+    console.log("hello")
+    this.getall();
+  }
   add():void{
    this.flag=1
   }
+  up():void{
+    this.flag1=1
+   }
   getall():void{
     this.flag=0
     this.service.getall().subscribe(
@@ -57,20 +67,8 @@ export class EmployeePageComponent implements OnInit {
 
     }
     update(e:Emp,i:number):void{
-      this.service.update(e).subscribe(
-        (response:Emp)=>{
-          console.log(this.AllEmp[i])
-          console.log(response)        
-          this.getall();
-          alert("Updated Successfully")
-         
-          
-        },
-        (error: any) => {
-          console.error(error);
-          
-        }
-      );
+       this.e1=e
+       this.flag1=1
     }
   }
 
