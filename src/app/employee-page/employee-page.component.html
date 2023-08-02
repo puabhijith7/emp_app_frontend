@@ -1,7 +1,8 @@
-<h2 style="margin-left:450px ;color: darkblue;"><b>WELCOME TO EMPLOYEE DASHBOARD</b></h2>
+
+<h2 style="margin-left:420px ;margin-top: 100px; color: darkblue;"><b>WELCOME TO EMPLOYEE DASHBOARD</b></h2>
 <div *ngIf="AllEmp.length > 0">
-<table border="2" style="margin-left: 120px;">
-    <thead>
+<table border="2" style="margin-left: 120px;background: rgb(189, 206, 220);">
+    <thead >
         <tr>
         <th>Emp_id</th>
         <th>Emp_Name</th>
@@ -13,17 +14,17 @@
         </tr>
     </thead>
     <tbody >
-        <tr *ngFor="let v of AllEmp;let i = index;">
+        <tr *ngFor="let v of AllEmp;let i = index;" >
         <td ><input type="number"  [(ngModel)]="v.emp_id" disabled></td>
         <td><input type="text"  [(ngModel)]="v.emp_name"></td>
         <td><input type="number"  [(ngModel)]="v.emp_age"></td>
         <td><input type="text"  [(ngModel)]="v.emp_gender"></td>
         <td><input type="text"  [(ngModel)]="v.emp_designation"></td>
-        <td><button type="submit" style="color: blue;" (click)="update(v,i)">Update</button></td>
-        <td><button type="submit" style="color:red;" (click)="delete(v.emp_id)">Delete</button></td>
+        <td><button type="submit" style="color: blue;" (click)="update(v,i)"><b>Update</b></button></td>
+        <td><button type="submit" style="color:red;" (click)="delete(v.emp_id)"><b>Delete</b></button></td>
         </tr>
     </tbody>
 </table></div>
-<button type="submit" (click)="add()" style="color: green;margin-left: 120px;margin-top: 5px;">Add Employee</button>
+<button type="submit" (click)="add()" style="color: rgb(11, 90, 11);margin-left: 120px;margin-top: 10px;"><b>Add Employee</b></button>
 
 <div *ngIf="flag==1"><app-add-emp (flag)="flagset()"></app-add-emp></div>
