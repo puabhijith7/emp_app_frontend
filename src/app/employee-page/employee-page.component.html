@@ -1,0 +1,29 @@
+<h2 style="margin-left:450px ;color: darkblue;"><b>WELCOME TO EMPLOYEE DASHBOARD</b></h2>
+<div *ngIf="AllEmp.length > 0">
+<table border="2" style="margin-left: 120px;">
+    <thead>
+        <tr>
+        <th>Emp_id</th>
+        <th>Emp_Name</th>
+        <th>Emp_Age</th>
+        <th>Emp_Gender</th>
+        <th>Emp_Designation</th>
+        <th>Update</th>
+        <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let v of AllEmp;let i = index;">
+        <td ><input type="number"  [(ngModel)]="v.emp_id" disabled></td>
+        <td><input type="text"  [(ngModel)]="v.emp_name"></td>
+        <td><input type="number"  [(ngModel)]="v.emp_age"></td>
+        <td><input type="text"  [(ngModel)]="v.emp_gender"></td>
+        <td><input type="text"  [(ngModel)]="v.emp_designation"></td>
+        <td><button type="submit" style="color: blue;" (click)="update(v,i)">Update</button></td>
+        <td><button type="submit" style="color:red;" (click)="delete(v.emp_id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table></div>
+<button type="submit" (click)="add()" style="color: green;margin-left: 120px;margin-top: 5px;">Add Employee</button>
+
+<div *ngIf="flag==1"><app-add-emp (flag)="flagset()"></app-add-emp></div>
