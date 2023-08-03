@@ -1,19 +1,19 @@
-<div style="margin-left: 580px;">
-Emp_Name<br>
-<input type="text" [(ngModel)]="emp_name"><br>
-Emp_Age<br>
-<input type="number" [(ngModel)]="emp_age"><br>
-Emp_Gender<br>
-<div>
-    <label>
+<div style="margin-left: 520px;">
+Name
+<input type="text" style="margin-left: 40px;" [(ngModel)]="emp_name"><br><br>
+Age
+<input type="number" style="margin-left: 50.5px;"  [(ngModel)]="emp_age"><br><br>
+Gender
+
+    <label style="margin-left: 25px;">
       <input type="radio" name="emp_gender" value="Male" [(ngModel)]="emp_gender"> Male
     </label>
     <label>
       <input type="radio" name="emp_gender" value="Female" [(ngModel)]="emp_gender"> Female
     </label>
-  </div>
-Emp_Designation<br>
+  <br><br>
+Designation
 <input type="text" [(ngModel)]="emp_designation"><br><br>
-<button type="submit" (click)="add()" style="color: Green;"><b>ADD</b></button>
-<button type="submit" (click)="back()" style="margin-left: 10px;">Back</button>
+<button type="submit" (click)="add()" style="color: Green;width: 60px;margin-left: 70px;"><b>ADD</b></button>
+<button type="submit" (click)="back()" style="margin-left: 20px;">Back</button>
 </div>

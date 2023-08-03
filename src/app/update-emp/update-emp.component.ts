@@ -15,7 +15,9 @@ export class UpdateEmpComponent implements OnInit {
   emp_designation:string=''
   emp_gender:string=''
   emp_id!:number
-  constructor(private service:EmpServiceService) { }
+  constructor(private service:EmpServiceService) { 
+   
+  }
    
   ngOnInit(): void {
     this.emp_age=this.inputData.emp_age
@@ -23,18 +25,26 @@ export class UpdateEmpComponent implements OnInit {
     this.emp_gender=this.inputData.emp_gender
     this.emp_name=this.inputData.emp_name
     
-    
+    console.log("ng")
+  }
+  ngOnChanges() {
+    this.emp_age=this.inputData.emp_age
+    this.emp_designation=this.inputData.emp_designation
+    this.emp_gender=this.inputData.emp_gender
+    this.emp_name=this.inputData.emp_name
+    console.log(this.emp_age)
+    console.log("af")
   }
   back():void{
     this.flag1.emit(1);
   }
   update():void{
-    const e=new Emp(this.emp_name,this.emp_gender,this.emp_age,this.emp_designation)
+    const e=new Emp(this.emp_designation,this.emp_name,this.emp_age,this.emp_gender)
     e.emp_id=this.inputData.emp_id
-    console.log(e)
-    console.log(this.inputData)
-//     const areEqual = JSON.stringify(e) == JSON.stringify(this.inputData);
-// console.log(areEqual);
+    console.log(JSON.stringify(e))
+    console.log(JSON.stringify(this.inputData));
+    const areEqual = JSON.stringify(e) == JSON.stringify(this.inputData);
+console.log(areEqual);
     
     if((e.emp_name!=this.inputData.emp_name)||(e.emp_age!=this.inputData.emp_age)||(e.emp_gender!=this.inputData.emp_gender)||(e.emp_designation!=this.inputData.emp_designation))
     {

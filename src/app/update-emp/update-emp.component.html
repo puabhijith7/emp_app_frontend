@@ -1,10 +1,10 @@
 
-<div style="margin-left: 580px;">
-Emp_Name<br>
+<!-- <div style="margin-left: 580px;">
+Name<br>
 <input type="text" [(ngModel)]="emp_name"><br>
-Emp_Age<br>
+Age<br>
 <input type="number" [(ngModel)]="emp_age"><br>
-Emp_Gender<br>
+Gender<br>
 <div>
     <label>
       <input type="radio" name="emp_gender" value="Male" [(ngModel)]="emp_gender"> Male
@@ -13,8 +13,28 @@ Emp_Gender<br>
       <input type="radio" name="emp_gender" value="Female" [(ngModel)]="emp_gender"> Female
     </label>
   </div>
-Emp_Designation<br>
+Designation<br>
 <input type="text" [(ngModel)]="emp_designation"><br><br>
 <button type="submit" (click)="update()"style="color: Blue;"><b>UPDATE</b></button>
 <button type="submit" (click)="back()" style="margin-left: 10px;">Back</button>
-</div>
+</div> -->
+
+<div style="margin-left: 520px;">
+    Name
+    <input type="text" style="margin-left: 40px;" [(ngModel)]="emp_name"><br><br>
+    Age
+    <input type="number" style="margin-left: 50.5px;"  [(ngModel)]="emp_age"><br><br>
+    Gender
+    
+        <label style="margin-left: 25px;">
+          <input type="radio" name="emp_gender" value="Male" [(ngModel)]="emp_gender"> Male
+        </label>
+        <label>
+          <input type="radio" name="emp_gender" value="Female" [(ngModel)]="emp_gender"> Female
+        </label>
+      <br><br>
+    Designation
+    <input type="text" [(ngModel)]="emp_designation"><br><br>
+    <button type="submit" (click)="update()" style="color: Blue;width: 70px;margin-left: 70px;"><b>UPDATE</b></button>
+    <button type="submit" (click)="back()" style="margin-left: 20px;">Back</button>
+    </div>
