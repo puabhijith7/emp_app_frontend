@@ -25,6 +25,9 @@ export class UpdateEmpComponent implements OnInit {
     
     
   }
+  back():void{
+    this.flag1.emit(1);
+  }
   update():void{
     const e=new Emp(this.emp_name,this.emp_gender,this.emp_age,this.emp_designation)
     e.emp_id=this.inputData.emp_id
@@ -45,7 +48,7 @@ export class UpdateEmpComponent implements OnInit {
        
         
       },
-      (error: any) => {
+      (error) => {
         console.error(error);
         
       }

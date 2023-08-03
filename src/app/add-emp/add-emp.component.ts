@@ -19,10 +19,14 @@ export class AddEmpComponent implements OnInit {
   emp_gender:string=''
   emp_designation:string=''
   emp_age!: number;
+
+  back():void{
+    this.flag.emit(1);
+  }
   
  
   add():void{
-   if((this.emp_name.length>3)&&(this.emp_age>18)&&(this.emp_designation.length>5)&&(this.emp_gender.length>3))
+   if((this.emp_name.length>3)&&(this.emp_age>18)&&(this.emp_designation.length>1)&&(this.emp_gender.length>3))
    {
    const a=new Emp(this.emp_name,this.emp_gender,this.emp_age,this.emp_designation);
    this.s.add(a).subscribe(

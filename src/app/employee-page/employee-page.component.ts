@@ -33,11 +33,12 @@ export class EmployeePageComponent implements OnInit {
   add():void{
    this.flag=1
   }
-  up():void{
-    this.flag1=1
-   }
+  // up():void{
+  //   this.flag1=1
+  //  }
   getall():void{
     this.flag=0
+    this.flag1=0
     this.service.getall().subscribe(
       (response: any) => {
         if (Array.isArray(response)) {
