@@ -19,11 +19,11 @@ Designation<br>
 <button type="submit" (click)="back()" style="margin-left: 10px;">Back</button>
 </div> -->
 
-<div style="margin-left: 520px;">
+<div style="margin-left: 520px;margin-top: 20px;">
     Name
     <input type="text" style="margin-left: 40px;" [(ngModel)]="emp_name"><br><br>
     Age
-    <input type="number" style="margin-left: 50.5px;"  [(ngModel)]="emp_age"><br><br>
+    <input type="number" style="margin-left: 51.5px;"  [(ngModel)]="emp_age"><br><br>
     Gender
     
         <label style="margin-left: 25px;">
@@ -34,7 +34,13 @@ Designation<br>
         </label>
       <br><br>
     Designation
-    <input type="text" [(ngModel)]="emp_designation"><br><br>
+    <select  [(ngModel)]="emp_designation" style="width: 170px;height:24px">
+        <option value="" disabled>Select Designation</option>
+        <option value="Manager">Manager</option>
+        <option value="Developer">Developer</option>
+        <option value="HR">HR</option>
+        <option value="Project Head">Project Head</option>
+      </select><br><br>
     <button type="submit" (click)="update()" style="color: Blue;width: 70px;margin-left: 70px;"><b>UPDATE</b></button>
     <button type="submit" (click)="back()" style="margin-left: 20px;">Back</button>
     </div>

@@ -29,4 +29,4 @@
 <!-- <button type="submit" (click)="up()" style="color: rgb(11, 90, 11);margin-left: 20px;margin-top: 10px;"><b>Update Employee</b></button> -->
 
 <div *ngIf="flag==1"><app-add-emp (flag)="flagset()"></app-add-emp></div>
-<div *ngIf="flag1==1"><app-update-emp [inputData]="e1" (flag1)="flagset1()"></app-update-emp></div>
+<div *ngIf="flag1==1"><app-update-emp [inputData]="e1" (flag1)="flagset1()" ></app-update-emp></div>
