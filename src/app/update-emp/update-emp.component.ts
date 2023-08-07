@@ -44,7 +44,7 @@ export class UpdateEmpComponent implements OnInit {
     e.emp_id=this.inputData.emp_id
      console.log(JSON.stringify(e))
      console.log(JSON.stringify(this.inputData));
-     const areEqual = JSON.stringify(e) == JSON.stringify(this.inputData);
+     const areEqual = JSON.stringify(e) == JSON.stringify(this.inputData); 
    console.log(areEqual);
     
     if((e.emp_name!=this.inputData.emp_name)||(e.emp_age!=this.inputData.emp_age)||(e.emp_gender!=this.inputData.emp_gender)||(e.emp_designation!=this.inputData.emp_designation))
