@@ -68,7 +68,9 @@ export class EmployeePageComponent implements OnInit {
     }
     update(e:Emp,i:number):void{
        console.log(e)
+       
        this.e1=e
+       console.log(JSON.stringify(this.e1))
        this.flag1=1
     }
   }
