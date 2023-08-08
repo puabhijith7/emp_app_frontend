@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Emp } from '../Emp';
 import { EmpServiceService } from '../emp-service.service';
 
@@ -10,7 +11,7 @@ import { EmpServiceService } from '../emp-service.service';
 export class AddEmpComponent implements OnInit {
   @Output() flag: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(private s:EmpServiceService) { }
+  constructor(private s:EmpServiceService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -21,7 +22,8 @@ export class AddEmpComponent implements OnInit {
   emp_age!: number;
 
   back():void{
-    this.flag.emit(1);
+   // this.flag.emit(1);
+   this.router.navigate(['/'])
   }
   
  
@@ -32,7 +34,8 @@ export class AddEmpComponent implements OnInit {
    this.s.add(a).subscribe(
     (response: any) => {   
       console.log(response)
-      this.flag.emit(1);
+      //this.flag.emit(1);
+      this.router.navigate(['/'])
   },
   (error) => {
     console.error(error);

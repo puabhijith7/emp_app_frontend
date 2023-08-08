@@ -1,7 +1,7 @@
 
 <h2 style="margin-left:420px ;margin-top: 80px; color: darkblue;"><b>WELCOME TO EMPLOYEE DASHBOARD</b></h2>
 <div *ngIf="AllEmp.length > 0">
-<table border="2px" style="margin-left: 330px;background: rgb(219, 229, 238);">
+<table border="2px" style="margin-left: 340px;background: rgb(219, 229, 238);">
     <thead>
         <tr>
         <th>Emp_id</th>
@@ -25,8 +25,8 @@
         </tr>
     </tbody>
 </table></div>
-<button type="submit" class="button" (click)="add()" style="color: rgb(11, 90, 11);margin-left: 330px;margin-top: 10px;" ><b>Add Employee</b></button>
+<button type="submit" class="button" (click)="add()" style="color: rgb(11, 90, 11);margin-left: 340px;margin-top: 10px;height: 30px;" ><b>Add Employee</b></button>
 <!-- <button type="submit" (click)="up()" style="color: rgb(11, 90, 11);margin-left: 20px;margin-top: 10px;"><b>Update Employee</b></button> -->
 
-<div *ngIf="flag==1"><app-add-emp (flag)="flagset()"></app-add-emp></div>
-<div *ngIf="flag1==1"><app-update-emp [inputData]="e1" (flag1)="flagset1()" ></app-update-emp></div>
+<!-- <div *ngIf="flag==1"><app-add-emp (flag)="flagset()"></app-add-emp></div>
+<div *ngIf="flag1==1"><app-update-emp [inputData]="e1" (flag1)="flagset1()" ></app-update-emp></div> -->

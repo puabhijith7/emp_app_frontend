@@ -8,7 +8,7 @@ import { Emp } from './Emp';
 })
 export class EmpServiceService {
   
- 
+  emp!:Emp
   
  
 
